@@ -15,6 +15,9 @@ const dearDiary = () => {
     // Getting a random value from the adjective array.
 
     const randomAdjective1 = adjectives[Math.floor(Math.random() * adjectiveLength)]
+    
+    // Checking it prints a random adjective.
+    console.log(randomAdjective1)
 
 }
 
