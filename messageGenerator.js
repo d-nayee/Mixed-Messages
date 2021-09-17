@@ -26,21 +26,40 @@ const dearDiary = () => {
 
     const selectNoun = () => {
         let count = 0
+        //console.log(`Count: ${count}\n`)
+        
 
-        do {
+        while (count < 4) {
+            // stores a randomly generated value in variable called tempNoun
+            let tempNoun = nouns[Math.floor(Math.random() * nounLength)]
+            
+
+            // A check to see if this is the first generated random value.
+            // if it is it can be added to the selectNoun array without camparing against elements in that same array.
+
+            if (count === 0) {
+                count += 1
+                randomNouns.push(tempNoun)
+                
+                console.log(`Count: ${count}`)
+                console.log(`list: ${randomNouns}\n`)
+            }
+
+
             randomNouns.forEach(item => {
-                // selects a random noun from the array.
-                let tempNoun = nouns[Math.floor(Math.random() * nounLength)]
 
-                //The if statement checks if this noun is NOT in the array. 
-                if (item !== randomNouns) {
-                    randomNouns.push(tempNoun)
+                // check to makesure the value is unique to the array before adding it.
+                if (item !== tempNoun) {
                     count += 1
+                    randomNouns.push(tempNoun)
+                    
+                    console.log(`Count: ${count}`)
+                    console.log(`list: ${randomNouns}\n`)
+
                 }
             })
-            // We only need 3 nouns and then we can stop.
 
-        } while (count < 4)
+        } 
 
     }
     selectNoun();
@@ -51,6 +70,6 @@ dearDiary();
 
 //const diaryMessage = `Yesterday, my ${adjective} ${personNoun} came to my ${placeNoun} to ${adverb} ${verb}. I appreciated it ${adverb}.\n\nToday the ${noun} told me to ${verb} ten times. I don't know why?\n\nTomorrow, I plan to ${adverb} ${verb} in the morning. It's on my list of things to do.`
 
-// adding a new branch.
+
 
 
