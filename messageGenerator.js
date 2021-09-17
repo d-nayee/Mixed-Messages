@@ -16,35 +16,6 @@ const dearDiary = () => {
 
     const randomAdjective1 = adjectives[Math.floor(Math.random() * adjectiveLength)]
 
-
-    // creating an empty list to store the value of the "selectNoun" function.
-
-    const randomNouns = [];
-
-    // This function selects a random noun and pushes it to the "randomNouns" array IF the value is UNIQUE.
-    // it does this 3 times.
-
-    const selectNoun = () => {
-        let count = 0
-
-        do {
-            randomNouns.forEach(item => {
-                // selects a random noun from the array.
-                let tempNoun = nouns[Math.floor(Math.random() * nounLength)]
-
-                //The if statement checks if this noun is NOT in the array. 
-                if (item !== randomNouns) {
-                    randomNouns.push(tempNoun)
-                    count += 1
-                }
-            })
-            // We only need 3 nouns and then we can stop.
-
-        } while (count < 4)
-
-    }
-    selectNoun();
-    console.log(randomNouns)
 }
 
 dearDiary();
