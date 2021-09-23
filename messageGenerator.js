@@ -54,11 +54,55 @@ const selectNoun = () => {
 
     }
 
+    const selectAdverb = () => {
+    const randomAdverbs = [];
+
+    let uniqueAdverbCheck = 0
+        
+        
+    // We only want an array of 3 elements.
+    while (randomAdverbs.length < 3) {
+        // stores a randomly generated value in variable called tempNoun
+        let tempAdverb = adverbs[Math.floor(Math.random() * adverbs.length)]
+            
+
+        // A check to see if this is the first generated random value.
+        // if it is it can be added to the selectNoun array without camparing against elements in that same array.
+
+        if (randomAdverbs.length === 0) {
+            randomAdverbs.push(tempAdverb)
+                
+        } else {
+            // A check against each element in the array for uniqueness.
+            randomAdverbs.forEach(item => {
+
+                if (item !== tempAdverb) {
+                    uniqueAdverbCheck += 1
+                    }
+                })
+
+            // If the tempNoun is unique the uniqueNounCheck and the length of the array would be equal.
+            if(uniqueAverbCheck === randomAdverbs.length) {
+                randomAdverbs.push(tempAdverb)
+                }
+                // reset the variable for the next check.
+                uniqueAdverbCheck = 0
+
+            }
+        } 
+
+    }
+
+
+
+    
+
 
 
 const dearDiary = () => {
  selectAdjectives()
  selectNoun()
+ selectAdverb()
 
 }
 
