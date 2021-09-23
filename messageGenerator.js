@@ -11,7 +11,7 @@ const selectAdjectives = () => {
     // Getting a random value from the adjective array and then adding it to the empty array.
     const tempAdjective = adjectives[Math.floor(Math.random() * adjectives.length)]
     randomAdjectives.push(tempAdjective)
-    console.log(randomAdjectives)
+    return randomAdjectives
 }
 
 // This function selects 3 random nouns and pushes it to the "randomNouns" array IF the value is UNIQUE.
@@ -52,7 +52,7 @@ const selectNoun = () => {
 
             }
         }
-        console.log(randomNouns)
+        return randomNouns
 
     }
 
@@ -92,20 +92,28 @@ const selectNoun = () => {
 
             }
         }
-        console.log(randomAdverbs)
+        return randomAdverbs
     }
 
 
 const dearDiary = () => {
- selectAdjectives()
- selectNoun()
- selectAdverb()
+ const adjectiveList = selectAdjectives()
+ const nounList = selectNoun()
+ const adverbList = selectAdverb()
+
+ const diaryMessage = `Yesterday, my ${adjectiveList[0]} ${nounList[0]} came to my ${nounList[1]}.` +
+                        `\nI appreciated it ${adverbList[0]}.` +
+                        `\n\nToday the ${nounList[2]}told me to ${verblist[0]} ten times. I don't know why?`
+                        `n\nTomorrow, I plan to ${adverbList[1]} ${verblist[0]} in the morning. It's on my list of things to do.`
+                        
+
+console.log(diaryMessage)
+
 
 }
 
 dearDiary();
 
-//const diaryMessage = `Yesterday, my ${adjective} ${personNoun} came to my ${placeNoun} to ${adverb} ${verb}. I appreciated it ${adverb}.\n\nToday the ${noun} told me to ${verb} ten times. I don't know why?\n\nTomorrow, I plan to ${adverb} ${verb} in the morning. It's on my list of things to do.`
 
 
 
