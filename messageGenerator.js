@@ -25,11 +25,11 @@ const dearDiary = () => {
     // it does this 3 times.
 
     const selectNoun = () => {
-        let count = 0
-        //console.log(`Count: ${count}\n`)
+        let uniqueNounCheck = 0
         
-
-        while (count < 4) {
+        
+        // We only want an array of 3 elements.
+        while (randomNouns.length < 3) {
             // stores a randomly generated value in variable called tempNoun
             let tempNoun = nouns[Math.floor(Math.random() * nounLength)]
             
@@ -37,28 +37,26 @@ const dearDiary = () => {
             // A check to see if this is the first generated random value.
             // if it is it can be added to the selectNoun array without camparing against elements in that same array.
 
-            if (count === 0) {
-                count += 1
+            if (randomNouns.length === 0) {
                 randomNouns.push(tempNoun)
                 
-                console.log(`Count: ${count}`)
-                console.log(`list: ${randomNouns}\n`)
-            }
+            } else {
+                // A check against each element in the array for uniqueness.
+                randomNouns.forEach(item => {
 
+                    if (item !== tempNoun) {
+                        uniqueNounCheck += 1
+                    }
+                })
 
-            randomNouns.forEach(item => {
-
-                // check to makesure the value is unique to the array before adding it.
-                if (item !== tempNoun) {
-                    count += 1
+                // If the tempNoun is unique the uniqueNounCheck and the length of the array would be equal.
+                if(uniqueNounCheck === randomNouns.length) {
                     randomNouns.push(tempNoun)
-                    
-                    console.log(`Count: ${count}`)
-                    console.log(`list: ${randomNouns}\n`)
-
                 }
-            })
+                // reset the variable for the next check.
+                uniqueNounCheck = 0
 
+            }
         } 
 
     }
