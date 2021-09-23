@@ -17,4 +17,4 @@ The words in **bold** are the variables which will change each time.
 
 Would appreciate any feedback and improvements.
 
-Feel feel to add on to this to make improvements.
+Feel free to add on to this to make improvements.
