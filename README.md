@@ -6,14 +6,14 @@ The random message will be in this format:
 
 "Dear Diary,
 
-Yesterday, my _adjective_ _noun_ came to my _noun_.
-I appreciated it _adverb_.
+Yesterday, my **adjective** **noun** came to my **noun**.
+I appreciated it **adverb**.
 
-Today my _noun_ told me to _verb_ ten times. I don't know why?
+Today my **noun** told me to **verb** ten times. I don't know why?
 
-Tomorrow, I plan to _adverb_ _verb_ with my _noun_ in the morning. It's on my list of things to do."
+Tomorrow, I plan to **adverb** **verb** with my **noun** in the morning. It's on my list of things to do."
 
-The words in _bold_ are the variables which will change each time.
+The words in **bold** are the variables which will change each time.
 
 Would appreciate any feedback and improvements.
 
