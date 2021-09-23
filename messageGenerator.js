@@ -13,8 +13,7 @@ const selectAdjectives = () => {
     randomAdjectives.push(tempAdjective)
 }
 
-// This function selects a random noun and pushes it to the "randomNouns" array IF the value is UNIQUE.
-// it does this 3 times.
+// This function selects 3 random nouns and pushes it to the "randomNouns" array IF the value is UNIQUE.
 
 const selectNoun = () => {
     // creating an empty list to store the value of the "selectNoun" function.
