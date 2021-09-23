@@ -4,14 +4,24 @@ const nouns = ["captain", "child", "brother", "sister", "friend", "mum", "dad", 
 const adverbs = ["secretly", "fast", "well", "quickly", "slowly", "accidentally", "badly", "carefully", "cheerfully", "strongly", "wishfully", "eagerly", "extermly", "entirely", "completely", "never", "sometimes", "occasionally", "always"]
 const verbs = ["argue", "believe", "change", "clean", "complain", "disappear", "dress", "drink", "eat", "encourage", "enjoy", "exist", "grow", "hide", "hold", "laugh", "record", "play", "point", "prepare", "sing", "sleep", "smile", "talk", "throw", "touch", "watch", "write"]
 
+// Functions selects 1 random adjective.
+const selectAdjectives = () => {
+    const randomAdjectives = []
+
+    // Getting a random value from the adjective array and then adding it to the empty array.
+    const tempAdjective = adjectives[Math.floor(Math.random() * adjectives.length)]
+    randomAdjectives.push(tempAdjective)
+}
+
 const dearDiary = () => {
+ selectAdjectives()
 
-    // Getting a random value from the adjective array.
-
-    const randomAdjective1 = adjectives[Math.floor(Math.random() * adjectives.length)]
     
-    // Checking it prints a random adjective.
-    console.log(randomAdjective1)
+
+    
+    
+    
+    
 
 
     // creating an empty list to store the value of the "selectNoun" function.
