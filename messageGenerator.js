@@ -63,7 +63,7 @@ const selectNoun = () => {
         
         
     // We only want an array of 3 elements.
-    while (randomAdverbs.length < 3) {
+    while (randomAdverbs.length < 2) {
         // stores a randomly generated value in variable called tempNoun
         let tempAdverb = adverbs[Math.floor(Math.random() * adverbs.length)]
             
