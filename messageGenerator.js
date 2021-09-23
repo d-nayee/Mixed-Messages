@@ -5,17 +5,10 @@ const adverbs = ["secretly", "fast", "well", "quickly", "slowly", "accidentally"
 const verbs = ["argue", "believe", "change", "clean", "complain", "disappear", "dress", "drink", "eat", "encourage", "enjoy", "exist", "grow", "hide", "hold", "laugh", "record", "play", "point", "prepare", "sing", "sleep", "smile", "talk", "throw", "touch", "watch", "write"]
 
 const dearDiary = () => {
-    
-    // variables of the length of each array.
-
-    const adjectiveLength = adjectives.length;
-    const nounLength = nouns.length;
-    const adverbLength = adverbs.length;
-    const verbLength = verbs.length;
 
     // Getting a random value from the adjective array.
 
-    const randomAdjective1 = adjectives[Math.floor(Math.random() * adjectiveLength)]
+    const randomAdjective1 = adjectives[Math.floor(Math.random() * adjectives.length)]
     
     // Checking it prints a random adjective.
     console.log(randomAdjective1)
@@ -35,7 +28,7 @@ const dearDiary = () => {
         // We only want an array of 3 elements.
         while (randomNouns.length < 3) {
             // stores a randomly generated value in variable called tempNoun
-            let tempNoun = nouns[Math.floor(Math.random() * nounLength)]
+            let tempNoun = nouns[Math.floor(Math.random() * nouns.length)]
             
 
             // A check to see if this is the first generated random value.
