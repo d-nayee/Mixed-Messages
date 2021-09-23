@@ -11,6 +11,7 @@ const selectAdjectives = () => {
     // Getting a random value from the adjective array and then adding it to the empty array.
     const tempAdjective = adjectives[Math.floor(Math.random() * adjectives.length)]
     randomAdjectives.push(tempAdjective)
+    console.log(randomAdjectives)
 }
 
 // This function selects 3 random nouns and pushes it to the "randomNouns" array IF the value is UNIQUE.
@@ -50,7 +51,8 @@ const selectNoun = () => {
                 uniqueNounCheck = 0
 
             }
-        } 
+        }
+        console.log(randomNouns)
 
     }
 
@@ -82,21 +84,16 @@ const selectNoun = () => {
                 })
 
             // If the tempNoun is unique the uniqueNounCheck and the length of the array would be equal.
-            if(uniqueAverbCheck === randomAdverbs.length) {
+            if(uniqueAdverbCheck === randomAdverbs.length) {
                 randomAdverbs.push(tempAdverb)
                 }
                 // reset the variable for the next check.
                 uniqueAdverbCheck = 0
 
             }
-        } 
-
+        }
+        console.log(randomAdverbs)
     }
-
-
-
-    
-
 
 
 const dearDiary = () => {
